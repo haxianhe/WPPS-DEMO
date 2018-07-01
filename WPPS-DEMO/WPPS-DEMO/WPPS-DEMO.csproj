@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F8EA09D-0E80-4BD5-8C1F-BCDB1CA0D4C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WPPS_DEMO</RootNamespace>
+    <AssemblyName>WPPS-DEMO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control.Designer.cs">
+      <DependentUpon>Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlModel.cs" />
+    <Compile Include="CreateRealTimeData.cs" />
+    <Compile Include="CreateWeatherData.cs" />
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PowerModel.cs" />
+    <Compile Include="PredictPeriodTime.cs" />
+    <Compile Include="PredictShortTime.cs" />
+    <Compile Include="PrePeriodTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrePeriodTime.Designer.cs">
+      <DependentUpon>PrePeriodTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreShortTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreShortTime.Designer.cs">
+      <DependentUpon>PreShortTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProRealTimeData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProRealTimeData.Designer.cs">
+      <DependentUpon>ProRealTimeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProWeatherData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProWeatherData.Designer.cs">
+      <DependentUpon>ProWeatherData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query.Designer.cs">
+      <DependentUpon>Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryOpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryOpt.Designer.cs">
+      <DependentUpon>QueryOpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryPower.cs" />
+    <Compile Include="SCADARealTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SCADARealTime.Designer.cs">
+      <DependentUpon>SCADARealTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScadaRealTimeData.cs" />
+    <Compile Include="SCADAWeather.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SCADAWeather.Designer.cs">
+      <DependentUpon>SCADAWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScadaWeatherData.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <EmbeddedResource Include="Control.resx">
+      <DependentUpon>Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePeriodTime.resx">
+      <DependentUpon>PrePeriodTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreShortTime.resx">
+      <DependentUpon>PreShortTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ProRealTimeData.resx">
+      <DependentUpon>ProRealTimeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProWeatherData.resx">
+      <DependentUpon>ProWeatherData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query.resx">
+      <DependentUpon>Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryOpt.resx">
+      <DependentUpon>QueryOpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCADARealTime.resx">
+      <DependentUpon>SCADARealTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCADAWeather.resx">
+      <DependentUpon>SCADAWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20160422113751_44598.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
